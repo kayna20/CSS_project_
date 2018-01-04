@@ -1,0 +1,78 @@
+/* 背景 */
+body{
+  top:0;
+  right:0;
+  bottom:0;
+  left: 0;
+  z-index:1;/*定位 z-index 元素堆叠顺序  可被用于将在一个元素放置于另一元素之后
+  仅能在定位position元素上奏效 
+  默认auto（为0） 无继承 所以browser都支持
+  值3个 auto number inherit*/
+  background: rgba(0,0,0,0.5);
+}
+
+#container{
+  width: 100%;
+  overflow: visible; /* 定位 overflow 当溢出是浏览器处理方式 
+    默认visible  无继承属性 所有brower都支持  css2
+    值有5个 visible scroll hidden auto inherit*/ 
+}
+
+.login-wrapper{
+  width: 450px;
+  height: 510px;
+  background-color: white;
+  position: absolute;/*定位 position 规定元素定位类型 
+    默认static 无继承 所有brower都支持  css2
+    5个值 inherit
+    static:出现在正常流中，忽略top,left,right,left,Z-index
+    absolute :（绝对定位）相对于static以外的第一个父元素定位，通过绝对定位，元素可以放置到页面上的任何位置。
+    fixed:（绝对定位）相对于浏览器窗口定位，
+    relative:（相对定位）相对其原始正常位置移动
+  */
+  left:50%;
+  top:50%;
+  margin-left: -255px;
+  margin-top:-255px;
+  border-radius:15px;/* CSS3边框
+元素添加圆角
+border-radius: **px/em  或者  **% ;（值越大，角弧度越大）
+Border-radius: (1-4)**  /  (1-4)** 
+object.style.borderRadius=” ”
+（省略下边角，则与相对应对角相同；省略上边角，则与相对应另一侧上边角相同）
+如果省略 bottom-left，则与 top-right 相同。如果省略 bottom-right，则与 top-left 相同。
+如果省略 top-right，则与 top-left 相同。 
+默认值：0  无继承   css3   
+IE9+、Firefox 4+、Chrome、Safari 5+ 以及 Opera 支持 border-radius 属性。
+-moz-border-radius:25px;  /* 老的 Firefox */ 
+}
+
+.title{
+  font-size:34px;
+  color:#07111b;
+  margin-top:75px;
+  margin-left:80px;
+}
+
+.subtitle{
+  font-size:14px;
+  color:#333333;
+  margin-top:30px;
+  margin-left:136px;
+}
+
+.input-wrapper{
+  width: 358px;
+  margin-left:45px;
+  margin-top:58px;
+}
+
+.user input{
+  border:none;
+  border-bottom:1px solid #d0d6d9;
+  font-size:16px;
+  width:358px;
+  line-height: 48px;
+}
+
+
