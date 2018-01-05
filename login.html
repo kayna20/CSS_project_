@@ -1,43 +1,40 @@
-<!DOCTYPE>
-<HTML>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-<!-- 设置浏览器自适应（不同设备不一样）-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 设置 -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <link rel="stylesheet" href="./css/login.css">
-  <link rel="stylesheet" href="./css/rest.css">
-  <title>login</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <title>登录</title>
 </head>
+
 <body>
   <div id="container">
-    <div  class="wrrapper">
+    <div class="login-wrapper">
       <div class="close">×</div>
-      <!-- 登录页头部 -->
       <div class="title">欢迎登录 「跑道」</div>
       <div class="subtitle">轻松登录，看更多IT知识</div>
-      <!--输入信息div -->
       <div class="input-wrapper">
-        <div class="input">
-          <input type="text" placeholder="请输入邮箱" name="" id=""/>
-          <input class="password" type="password" placeholder="请输入密码" name="" id=""/>
+        <div class="user">
+          <input type="text" placeholder="请输入邮箱" name="" id="">
+          <input class="password" type="password" placeholder="请输入密码" name="" id="">
         </div>
-
         <div class="option-wrapper">
-          <input type="checkbox" name="" id="">记住我
+          <input type="checkbox" name="" id=""> 记住我
           <div class="forget">忘记密码</div>
         </div>
-
         <div class="login">登录</div>
-        
-        <div class="regist">还没有账号？</div>
-        <!-- 为什么用span???而不是将"还没有账号"和"马上注册"放在同一个div
+        <div class="regist">
+          还没有账号？
+          <span style="color:#ff6464">马上注册</span>  
+<!-- 为什么用span???而不是将"还没有账号"和"马上注册"放在同一个div
         因为span是行内元素， 不会独占一行，节省代码量，用div要设置格式-->
-        <span style="color:#ff6464">马上注册 </span>
+        </div>
       </div>
     </div>
   </div>
 </body>
-</HTML>
+
+</html>

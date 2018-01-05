@@ -1,0 +1,91 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+body{
+  font-family:"微软雅黑"，"Arial Narrow";
+  letter-spacing:2px;/* 字符间距 */
+  line-height: 1.8em;
+}
+
+textarea{
+  /* css3 用户是否可以调整div，当非none时，要同时设置overflow属性 */
+  resize:none;
+}
+
+a,
+image{
+  border:0;
+}
+
+a{
+  color:#666;
+  text-decoration:none;  /* 对文本字体修饰，默认为none */
+}
+li{
+  list-style-type:none;
+}
+
+input{
+  outline:none;
+  /* 元素轮廓，位于外边框外边缘，不占空间，若规定！DOCTYPE,则IE8支持 */
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.nf {
+  clear: both;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.green {
+  color: #00b500;
+  font-weight: bold;
+}
+
+.ds {
+  display: block;
+}
+
+.hid {
+  overflow: hidden;
+}
+
+.clearfix {
+  /* 设置对象缩放比例 */
+  *zoom: 1
+}
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  /* content与：befor和：after伪类选择器结果使用，定义元素之前或者之后放置内容 */
+  content: '.';
+  font-size: 0
+}
+
+/*  */
+.jianbian {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #eee));
+  background: -webkit-linear-gradient(top, #f4f4f4 0, #eee 100%);
+  background: linear-gradient(to bottom, #f4f4f4 0, #eee 100%);
+}
+/*  */
+.bottomshadow {
+  border-bottom: solid 1px #B3B3B3;
+  -webkit-box-shadow: 0 1px 1px 0 #DFDFDF;
+  box-shadow: 0 1px 1px 0 #DFDFDF;
+}
+
