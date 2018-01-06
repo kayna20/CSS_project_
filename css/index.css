@@ -2,9 +2,10 @@
 body {
   background-color: #dce0e5;
 }
+
 #container {
   width: 1900px;
-  margin: 0 auto;
+  margin: 0 0;
 }
 
 #top {
@@ -13,14 +14,14 @@ body {
   background-color: #07111b;
   padding-top: 22px;
   color: #b9babb;
-  position: relative;
+  position: relative;/* 内置float元素 */
   box-shadow: -10px 7px 30px #333;
 }
 
 .logo {
   width: 119px;
   height: 37px;
-  background: url(../imgs/logo.png) no-repeat;
+  background: url(../imges/logo.png) no-repeat;
   margin-left: 60px;
   float: left;
   margin-right: 10px;
@@ -32,7 +33,7 @@ body {
 }
 
 .search {
-  position: relative;
+  position: relative;/* 内置float元素和各种需要相对父框的定位元素*/
   height: 50px;
   float: left
 }
@@ -42,17 +43,17 @@ body {
   height: 38px;
   border: none;
   border-bottom: 1px solid #b9babb;
-  background-color: #07111b;
+  background-color:inherit;
   margin-left: 30px;
   color: #b9babb;
   float: left;
-  background-image: url(../imgs/search-icon.png);
+  background-image: url(../imges/search-icon.png);
   background-repeat: no-repeat;
   background-position: 95% 34%;
 }
 
 .search-tag {
-  position: relative;
+  position: relative;/*  */
   left: 206px;
   top: -36px;
   font-size: 14px;
@@ -68,7 +69,7 @@ body {
   width: 237px;
   height: 58px;
   margin-right: 60px;
-  position: relative;
+  position: relative;/*  */
   float: right;
 }
 
@@ -79,8 +80,8 @@ body {
   border-radius: 20px;
   text-align: center;
   line-height: 40px;
-  background: url(../imgs/fire-icon.png) no-repeat 30% 50%;
-  text-indent: 2em;
+  background: url(../imges/fire-icon.png) no-repeat 30% 50%;
+  text-indent: 2em;/* 段落首行缩进 */
   float: left;
 }
 
@@ -91,7 +92,7 @@ body {
 .notice {
   width: 13px;
   height: 15px;
-  background: url(../imgs/notice.png) no-repeat;
+  background: url(../imges/notice.png) no-repeat;
   margin-left: 45px;
   margin-top: 15px;
   float: left;
@@ -106,7 +107,8 @@ body {
   background: red;
   font-size: 2px;
   line-height: 8px;
-  letter-spacing: 0.1px;
+  letter-spacing: 1px;
+  /* 字符间距 */
   color: white;
   border-radius: 4px;
   float: left;
@@ -127,22 +129,23 @@ body {
 .profile {
   width: 230px;
   height: 205px;
-  position: absolute;
+  position: absolute;/*相对原正常流位置  */
   padding-left: 20px;
   padding-top: 20px;
   top: 50px;
   border-radius: 10px;
-  -moz-box-shadow: -6px 7px 20px #333333;
+  -moz-box-shadow: -6px 7px 20px #333333;/* 定义firfox和chrowm浏览器，以及默认下阴影效果 */
   -webkit-box-shadow: -6px 7px 20px #333333;
   box-shadow: -6px 7px 20px #333333;
-  display: none;
+  display: none;/*定义弹出机制  */
   background-color: white;
-  z-index: -10;
+  z-index: -10;/* 去掉依然正常 */
+  /* 为什么有弹出，还用z-index？？？？ */
 }
 .pro-avatar {
   width: 53px;
   height: 53px;
-  float: left;
+  float: left;/*  */
 }
 .pro-avatar img {
   width: 53px;
@@ -154,21 +157,22 @@ body {
   font-size: 14px;
   margin-left: 23px;
   margin-top: 10px;
-  float: left;
+  float: left;/*  */
 }
 .ask-btn {
   width: 190px;
   height: 26px;
   border-radius: 5px;
   margin-top: 15px;
-  background-color: #fc4747;
-  background-image: url(../imgs/fire-icon.png);
+  background:#fc4747 url(../imges/fire-icon.png) no-repeat 40% 50%;/* 建议写法 */
+  /* background-color: #fc4747;
+  background-image: url(../imges/fire-icon.png);
   background-repeat: no-repeat;
-  background-position: 40% 50%;
+  background-position: 40% 50%; */
   color: white;
   line-height: 26px;
   text-align: center;
-  text-indent: 2em;
+  text-indent: 2em; /* 首行后退2em */
   float: left;
 }
 .opreate {
@@ -185,7 +189,7 @@ body {
   background-color: #f8fafc;
   border-radius: 2px;
   color: #000;
-  background: url(../imgs/withdraw.png) no-repeat 15% 50%;
+  background: url(../imges/withdraw.png) no-repeat 15% 50%;
   float: left;
 }
 .recharge {
@@ -196,7 +200,7 @@ body {
   background-color: #f8fafc;
   border-radius: 2px;
   color: #000;
-  background: url(../imgs/recharge.png) no-repeat 15% 50%;
+  background: url(../imges/recharge.png) no-repeat 15% 50%;
   float: right;
 }
 .exit {
@@ -214,12 +218,13 @@ body {
   margin-top: 20px;
   background-color: white;
   position: relative;
-  z-index: -20;
+  z-index: -20;/* 去掉效果一样，为什么要加？？？？ */
   border-radius: 10px;
-  padding-left: 20px;
+  padding:20px;
+  /* padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 20px; */
 }
 .count {
   color: #555555;
@@ -229,6 +234,7 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   border: none;
+  /* border-width默认为medium */
   height: 1px;
 }
 .sign {
@@ -304,7 +310,13 @@ body {
 .link li a {
   color: #c1c6cb;
 }
+/* 为甚需要单独再写一遍？ */
+li{
+  list-style-type:none;
+}
+
 .rights {
+
   width: 571px;
   height: 30px;
   color: #616569;

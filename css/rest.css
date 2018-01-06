@@ -22,6 +22,7 @@ a{
   color:#666;
   text-decoration:none;  /* 对文本字体修饰，默认为none */
 }
+
 li{
   list-style-type:none;
 }
@@ -61,9 +62,13 @@ input{
   overflow: hidden;
 }
 
+
 .clearfix {
-  /* 设置对象缩放比例 */
-  *zoom: 1
+ /* 这个是hack写法，用来识别不同版本的IE浏览器。
+ *后面的属性 IE6 IE7能识别，IE8 IE9……都不能识别；
+ "_"后面的属性，只有IE6能识别，其他版本（IE7 8 9 更高级别）都不能识别 */
+  *zoom: 1; /* 设置对象缩放比例 ．*/
+  _height:1px;
 }
 
 .clearfix:after {
@@ -85,6 +90,7 @@ input{
 /*  */
 .bottomshadow {
   border-bottom: solid 1px #B3B3B3;
+  /*  webkit crome, moz firfox*/
   -webkit-box-shadow: 0 1px 1px 0 #DFDFDF;
   box-shadow: 0 1px 1px 0 #DFDFDF;
 }
